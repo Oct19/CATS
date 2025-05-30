@@ -38,7 +38,11 @@ import pandas as pd
 import numpy as np
 import os
 from scipy import interpolate
-from ndi_config import MAX_POSITION_CHANGE, ORIGINAL_FRAME_RATE, DESIRED_FRAME_RATE
+from config import (
+    NDI_MAX_POSITION_CHANGE as MAX_POSITION_CHANGE,
+    NDI_ORIGINAL_FRAME_RATE as ORIGINAL_FRAME_RATE,
+    NDI_DESIRED_FRAME_RATE as DESIRED_FRAME_RATE
+)
 
 def get_latest_csv_file(ndi_folder):
     """Get the latest CSV file in the specified folder."""
@@ -273,7 +277,7 @@ def main():
 
     # Get the CSV file to process
     try:
-        from ndi_config import CSV_FILE
+        from config import CSV_FILE
         if not os.path.isfile(CSV_FILE):
             raise FileNotFoundError(f"Specified CSV_FILE '{CSV_FILE}' does not exist or is not a valid file")
         file_path = CSV_FILE

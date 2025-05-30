@@ -1,0 +1,20 @@
+Elbow
+
+Two actuator. One speed control with 100 step/s. another constant force with 10N
+
+Record two actuators position and force reading. But not at the same time, so need to repeat the same process for two times and record each actuator once at a time.
+
+Position to engage wire     1500
+Position to pre-tension     1200
+
+actuator 1: constant force -10N
+actuator 2: speed 100 step/s
+
+Postion in degrees      steps
+90      400
+60      650
+30      850
+0       1020
+-30     1200
+-60     1400
+-90     1700
